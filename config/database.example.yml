@@ -1,0 +1,6 @@
+devel:
+  adapter:  postgres
+  user:     beoiuser
+  host:     localhost
+  database: beoi
+  password: apassword

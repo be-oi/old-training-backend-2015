@@ -1,0 +1,61 @@
+# Logfile created on 2014-08-05 20:55:18 +0200 by logger.rb/41954
+I, [2014-08-05T21:05:20.130556 #32216]  INFO -- : (0.000265s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:05:20.130766 #32216]  INFO -- : (0.000100s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:05:20.130911 #32216]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:12:26.263973 #32303]  INFO -- : (0.000296s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:12:26.264190 #32303]  INFO -- : (0.000105s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:12:26.264335 #32303]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:12:46.169843 #32311]  INFO -- : (0.000281s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:12:46.170062 #32311]  INFO -- : (0.000107s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:12:46.170223 #32311]  INFO -- : (0.000115s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:13:12.843768 #32318]  INFO -- : (0.000310s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:13:12.844034 #32318]  INFO -- : (0.000155s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:13:12.844199 #32318]  INFO -- : (0.000119s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:13:23.454794 #32322]  INFO -- : (0.000272s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:13:23.455060 #32322]  INFO -- : (0.000151s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:13:23.455228 #32322]  INFO -- : (0.000116s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:37:41.822513 #32492]  INFO -- : (0.000275s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:37:41.822725 #32492]  INFO -- : (0.000101s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:37:41.822869 #32492]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
+E, [2014-08-05T21:37:41.826591 #32492] ERROR -- : PG::UndefinedTable: ERROR:  relation "schema_migrations" does not exist
+LINE 1: SELECT NULL AS "nil" FROM "schema_migrations" LIMIT 1
+                                  ^: SELECT NULL AS "nil" FROM "schema_migrations" LIMIT 1
+I, [2014-08-05T21:37:41.856114 #32492]  INFO -- : (0.029127s) CREATE TABLE "schema_migrations" ("filename" text PRIMARY KEY)
+E, [2014-08-05T21:37:41.856804 #32492] ERROR -- : PG::UndefinedTable: ERROR:  relation "schema_info" does not exist
+LINE 1: SELECT NULL AS "nil" FROM "schema_info" LIMIT 1
+                                  ^: SELECT NULL AS "nil" FROM "schema_info" LIMIT 1
+I, [2014-08-05T21:37:41.862766 #32492]  INFO -- : (0.005657s) SELECT "filename" FROM "schema_migrations" ORDER BY "filename"
+I, [2014-08-05T21:38:54.928289 #32500]  INFO -- : (0.000257s) SET standard_conforming_strings = ON
+I, [2014-08-05T21:38:54.928508 #32500]  INFO -- : (0.000108s) SET client_min_messages = 'WARNING'
+I, [2014-08-05T21:38:54.928652 #32500]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2014-08-05T21:38:54.932637 #32500]  INFO -- : (0.003780s) SELECT NULL AS "nil" FROM "schema_migrations" LIMIT 1
+I, [2014-08-05T21:38:54.933135 #32500]  INFO -- : (0.000235s) SELECT * FROM "schema_migrations" LIMIT 1
+I, [2014-08-05T21:38:54.934064 #32500]  INFO -- : (0.000745s) SELECT "filename" FROM "schema_migrations" ORDER BY "filename"
+I, [2014-08-05T21:38:54.934321 #32500]  INFO -- : Begin applying migration 201408052134_init.rb, direction: up
+I, [2014-08-05T21:38:54.934544 #32500]  INFO -- : (0.000150s) BEGIN
+I, [2014-08-05T21:38:54.946625 #32500]  INFO -- : (0.011836s) CREATE TABLE "users" ("user_id" serial PRIMARY KEY, "name" text)
+I, [2014-08-05T21:38:54.956683 #32500]  INFO -- : (0.009750s) SELECT pg_attribute.attname AS pk FROM pg_class, pg_attribute, pg_index, pg_namespace WHERE pg_class.oid = pg_attribute.attrelid AND pg_class.relnamespace = pg_namespace.oid AND pg_class.oid = pg_index.indrelid AND pg_index.indkey[0] = pg_attribute.attnum AND pg_index.indisprimary = 't' AND pg_class.oid = CAST(CAST('"schema_migrations"' AS regclass) AS oid)
+I, [2014-08-05T21:38:54.957646 #32500]  INFO -- : (0.000609s) INSERT INTO "schema_migrations" ("filename") VALUES ('201408052134_init.rb') RETURNING "filename"
+I, [2014-08-05T21:38:54.958395 #32500]  INFO -- : (0.000625s) COMMIT
+I, [2014-08-05T21:38:54.958512 #32500]  INFO -- : Finished applying migration 201408052134_init.rb, direction: up, took 0.024182 seconds
+I, [2014-09-07T22:38:15.597392 #27968]  INFO -- : (0.000972s) SET standard_conforming_strings = ON
+I, [2014-09-07T22:38:15.598407 #27968]  INFO -- : (0.000380s) SET client_min_messages = 'WARNING'
+I, [2014-09-07T22:38:15.598793 #27968]  INFO -- : (0.000260s) SET DateStyle = 'ISO'
+E, [2014-09-07T22:38:15.600002 #27968] ERROR -- : PG::UndefinedTable: ERROR:  relation "schema_migrations" does not exist
+LINE 1: SELECT NULL AS "nil" FROM "schema_migrations" LIMIT 1
+                                  ^: SELECT NULL AS "nil" FROM "schema_migrations" LIMIT 1
+I, [2014-09-07T22:38:15.612195 #27968]  INFO -- : (0.011606s) CREATE TABLE "schema_migrations" ("filename" text PRIMARY KEY)
+E, [2014-09-07T22:38:15.612835 #27968] ERROR -- : PG::UndefinedTable: ERROR:  relation "schema_info" does not exist
+LINE 1: SELECT NULL AS "nil" FROM "schema_info" LIMIT 1
+                                  ^: SELECT NULL AS "nil" FROM "schema_info" LIMIT 1
+I, [2014-09-07T22:38:15.615093 #27968]  INFO -- : (0.001607s) SELECT "filename" FROM "schema_migrations" ORDER BY "filename"
+I, [2014-09-07T22:38:15.615715 #27968]  INFO -- : Begin applying migration 201408052134_init.rb, direction: up
+I, [2014-09-07T22:38:15.616077 #27968]  INFO -- : (0.000233s) BEGIN
+I, [2014-09-07T22:38:15.621694 #27968]  INFO -- : (0.005266s) CREATE TABLE "users" ("user_id" serial PRIMARY KEY, "google_client_id" varchar(99) NULL, "username" varchar(50) NOT NULL, "email" varchar(50) NOT NULL)
+I, [2014-09-07T22:38:15.623008 #27968]  INFO -- : (0.001089s) CREATE INDEX "users_google_client_id_index" ON "users" ("google_client_id")
+I, [2014-09-07T22:38:15.625987 #27968]  INFO -- : (0.002788s) CREATE TABLE "contests" ("contest_id" serial PRIMARY KEY, "name" varchar(50) NOT NULL)
+I, [2014-09-07T22:38:15.632971 #27968]  INFO -- : (0.006649s) CREATE TABLE "results" ("user_id" integer NOT NULL REFERENCES "users"("user_id") DEFERRABLE INITIALLY DEFERRED, "contest_id" integer NOT NULL REFERENCES "contests"("contest_id") DEFERRABLE INITIALLY DEFERRED, "score" decimal, "rank" integer, PRIMARY KEY ("user_id", "contest_id"))
+I, [2014-09-07T22:38:15.635675 #27968]  INFO -- : (0.002347s) SELECT pg_attribute.attname AS pk FROM pg_class, pg_attribute, pg_index, pg_namespace WHERE pg_class.oid = pg_attribute.attrelid AND pg_class.relnamespace = pg_namespace.oid AND pg_class.oid = pg_index.indrelid AND pg_index.indkey[0] = pg_attribute.attnum AND pg_index.indisprimary = 't' AND pg_class.oid = CAST(CAST('"schema_migrations"' AS regclass) AS oid)
+I, [2014-09-07T22:38:15.636566 #27968]  INFO -- : (0.000622s) INSERT INTO "schema_migrations" ("filename") VALUES ('201408052134_init.rb') RETURNING "filename"
+I, [2014-09-07T22:38:15.637810 #27968]  INFO -- : (0.001132s) COMMIT
+I, [2014-09-07T22:38:15.637883 #27968]  INFO -- : Finished applying migration 201408052134_init.rb, direction: up, took 0.022166 seconds
