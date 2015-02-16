@@ -6,6 +6,6 @@
 # apps, http://rack.github.com/ or http://en.wikipedia.org/wiki/Rack_(web_server_interface)
 #
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
-require 'BeOI'
+require 'beoi'
 run BeOI::App
 use Rack::PostBodyContentTypeParser

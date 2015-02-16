@@ -31,7 +31,7 @@ module BeOI
     def environment
       @environment ||= begin
         env   = ENV['BEOI_ENV']
-        env ||= Path.backfind('.BeOI').read.strip rescue nil
+        env ||= Path.backfind('.beoi').read.strip rescue nil
         env ||= 'devel'
         env.to_sym
       end    

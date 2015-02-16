@@ -1,5 +1,5 @@
 $:.unshift File.expand_path('../lib', __FILE__)
-require 'BeOI'
+require 'beoi'
 include BeOI::Config
 
 # We run tests by default
