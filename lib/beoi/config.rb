@@ -9,7 +9,8 @@ module BeOI
       @config ||= begin
         config = Hash.new
         ['database', 'jwt'].each do |cfg|
-          file = Path.backfind("config/#{cfg}.yml")
+          path = "config/#{cfg}.yml"
+          file = Path.backfind(path)
           config_error(path) unless file && file.exist?
           config_error(file) unless (envs = file.load).is_a?(Hash)
           # Merge all envs and their keys
