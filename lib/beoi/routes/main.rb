@@ -17,4 +17,15 @@ class BeOI::App < Sinatra::Application
     user.slice(:user_id, :is_admin, :is_contestant).to_json
   end
 
+  get '/api/uva_problems' do
+    problem_sets = BeOI::DB[:uva_problem_sets]
+    problem_sets = problem_sets.order(Sequel.desc(:uva_problem_sets__deadline))
+    problem_sets = problem_sets.all
+    result = problem_sets.map { |pset|
+      pset[:problems] = BeOI::DB[:uva_problems].where(:uva_problem_set_id => pset[:uva_problem_set_id]).all
+      pset
+    }
+    result.to_json
+  end
+
 end
